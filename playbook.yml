@@ -1,0 +1,16 @@
+- name: Create user on a linux server
+  hosts: azure_vm
+  become: yes
+  gather_facts: false
+  vars:
+    - user: Aami
+    - password: Password
+  
+  tasks:
+      - name: Create a login user
+        user:
+          name: "{{ user }}"
+          password: "{{ password }}"
+          groups:
+            - sudo
+          state: present
