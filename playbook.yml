@@ -3,7 +3,7 @@
   become: yes
   gather_facts: false
   vars:
-    - user: Aami
+    - user: Anvitha
     - password: Password
   
   tasks:
